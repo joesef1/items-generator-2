@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="item-generator">
+      <div class="container">
+        <div class="item-generator-section">
+          <div class="Item_selector">
+            <select id="items">
+              <option disabled selected>Select an item</option>
+              <option value="item1">Item 1</option>
+              <option value="item2">Item 2</option>
+              <option value="item3">Item 3</option>
+              <option value="item4">Item 4</option>
+              <option value="item5">Item 5</option>
+              <option value="item6">Item 6</option>
+              <option value="item7">Item 7</option>
+              <option value="item8">Item 8</option>
+              <option value="item9">Item 9</option>
+              <option value="item10">Item 10</option>
+            </select>
+          </div>
+          <div class="quantity">
+            <button id="decrease-quantity">-</button>
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="100"
+              value="1"
+            />
+            <button id="increase-quantity">+</button>
+          </div>
+
+          <div class="addbutton">
+            <button>add</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./main.js"></script>
+  <title>Item generator</title>
+</head>
+<body>
+
+
+
+  <div id="first-section">
+    <select id="item-select">
+      <option value="" disabled selected >Select an item</option>
+    </select>
+    <div class="quantity_generator">
+      <p class="quantity" id="quantity">1</p>
+      <button id="decrease-btn" onclick="decreaseQuantity()">-</button>
+      <button id="increase-btn" onclick="increaseQuantity()">+</button>
+    </div>
+
+    <button id="add-btn" onclick="addSection()">Add</button>
+  </div>
+  <div id="container"></div>
+
+
+  <div id="second-section">
+    <div>
+      <p id="total-price"></p>
+    </div>
+    <div>
+      <button>save</button>
+    </div>
+
+  </div>
+  
+  
+</body>
+</html>   -->

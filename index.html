@@ -13,7 +13,7 @@
       <div class="container">
         <div class="item-generator-section">
           <div class="Item_selector">
-            <select id="items">
+            <select aria-placeholder="Select an item" id="items">
               <option disabled selected>Select an item</option>
               <option value="item1">Item 1</option>
               <option value="item2">Item 2</option>
@@ -30,7 +30,7 @@
           <div class="quantity">
             <button id="decrease-quantity">-</button>
             <input
-              type="text"
+              type="number"
               id="quantity"
               name="quantity"
               min="1"
@@ -41,55 +41,19 @@
           </div>
 
           <div class="addbutton">
-            <button>add</button>
+            <button id="add-button">add</button>
           </div>
-
-
         </div>
+        <div class="addeditems"></div>
+      </div>
+    </div>
+
+    <div class="total_price">
+      <div class="total">total: $</div>
+      <div class="save">
+        <button>save</button>
       </div>
     </div>
   </body>
 </html>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <script defer src="./main.js"></script>
-  <title>Item generator</title>
-</head>
-<body>
-
-
-
-  <div id="first-section">
-    <select id="item-select">
-      <option value="" disabled selected >Select an item</option>
-    </select>
-    <div class="quantity_generator">
-      <p class="quantity" id="quantity">1</p>
-      <button id="decrease-btn" onclick="decreaseQuantity()">-</button>
-      <button id="increase-btn" onclick="increaseQuantity()">+</button>
-    </div>
-
-    <button id="add-btn" onclick="addSection()">Add</button>
-  </div>
-  <div id="container"></div>
-
-
-  <div id="second-section">
-    <div>
-      <p id="total-price"></p>
-    </div>
-    <div>
-      <button>save</button>
-    </div>
-
-  </div>
-  
-  
-</body>
-</html>   -->

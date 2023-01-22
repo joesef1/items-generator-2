@@ -4,56 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/counter.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/addeditem.css" />
     <script defer src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Barlow:wght@100&family=Bellefair&family=Cinzel:wght@500&family=Epilogue:wght@500;700&family=Inter:wght@400;700&family=Nunito+Sans:wght@300;600;800&family=Oswald:wght@400;500&family=Poppins:wght@400;500;600;700&family=Righteous&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,700;1,300&family=Rubik:wght@300;400;500&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Document</title>
+
+
   </head>
   <body>
-    <div class="item-generator">
-      <div class="container">
-        <div class="item-generator-section">
-          <div class="Item_selector">
-            <select aria-placeholder="Select an item" id="items">
-              <option disabled selected>Select an item</option>
-              <option value="item1">Item 1</option>
-              <option value="item2">Item 2</option>
-              <option value="item3">Item 3</option>
-              <option value="item4">Item 4</option>
-              <option value="item5">Item 5</option>
-              <option value="item6">Item 6</option>
-              <option value="item7">Item 7</option>
-              <option value="item8">Item 8</option>
-              <option value="item9">Item 9</option>
-              <option value="item10">Item 10</option>
-            </select>
+    <div  class="container">
+      <div class="item-generator">
+        <div class="item-generator-container">
+          <div class="item-generator-section">
+      
+            <div class="Item_selector">
+              
+              <div class="select-box">
+                <div class="select-box__current" tabindex="1">
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="-1" value="0" name="Ben" checked="checked"/>
+                    <p class="select-box__input-text">Choose an item</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="0" value="1" name="Ben"/>
+                    <p class="select-box__input-text">Cream</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
+                    <p class="select-box__input-text">Cheese</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="2" value="3" name="Ben"/>
+                    <p class="select-box__input-text">Milk</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="3" value="4" name="Ben"/>
+                    <p class="select-box__input-text">Honey</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="4" value="5" name="Ben"/>
+                    <p class="select-box__input-text">Toast</p>
+                  </div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+                </div>
+                <ul class="select-box__list">
+                  <li>
+                    <label class="select-box__option" for="-1" aria-hidden="aria-hidden">Choose an item</label>
+                  </li>
+                  <li>
+                    <label class="select-box__option" for="0" aria-hidden="aria-hidden">Cream</label>
+                  </li>
+                  <li>
+                    <label class="select-box__option" for="1" aria-hidden="aria-hidden">Cheese</label>
+                  </li>
+                  <li>
+                    <label class="select-box__option" for="2" aria-hidden="aria-hidden">Milk</label>
+                  </li>
+                  <li>
+                    <label class="select-box__option" for="3" aria-hidden="aria-hidden">Honey</label>
+                  </li>
+                  <li>
+                    <label class="select-box__option" for="4" aria-hidden="aria-hidden">Toast</label> 
+              
           </div>
-          <div class="quantity">
-            <button id="decrease-quantity">-</button>
-            <input
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="100"
-              value="1"
-            />
-            <button id="increase-quantity">+</button>
+        
+      
+            <div class="quantity">
+                <div class="number-input">
+              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+              <input class="quantity" min="0" name="quantity" value="1" type="number">
+              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+            </div>
+            </div>
+
+            <div class="addbutton">
+              <button id="add-button">add</button>
+            </div>
           </div>
 
-          <div class="addbutton">
-            <button id="add-button">add</button>
+          
+        </div>
+      </div>
+
+      <div class="addeditems">
+            
+          </div>
+      
+      <div  class="total_price">
+        <div class="total_price_container">
+          <div class="total_text"> <span style="color: #8e8f9c;" >Total:</span> <span  class="dollar">$</span> </div>
+          <div class="save">
+            <button id="save_items_btn">save</button>
           </div>
         </div>
-        <div class="addeditems"></div>
       </div>
-    </div>
+    
 
-    <div class="total_price">
-      <div class="total">total: $</div>
-      <div class="save">
-        <button>save</button>
-      </div>
+
+
+
+
+
+
+
+
+<!-- 
+      <div class="addeditem">
+<div class="item_left_section">
+        <div class="item_image">
+        
+          <img src="./img/Canva.png" alt="">
+        </div>
+        <div class="item_info">
+          <div class="item_name">${selectedItem}</div>
+          <div class="item_price">$</div>
+        </div>
+        </div>
+
+        <div class="item_right_section">
+
+        <div class="item_quantity">
+
+
+        <div class="quantity">
+        <div class="number-input">
+      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+      <input class="quantity" min="0" name="quantity" value="${quantity}" type="number">
+      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
     </div>
+    </div>
+      
+        </div>
+
+        <div>
+          <div class="delete_button">del</div>
+          <div class="check_box">che</div>
+        </div>
+      </div>
+      </div> -->
+
+
+
+
+
+      <div class="space"></div>
   </body>
+  
 </html>
 

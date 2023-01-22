@@ -1,0 +1,97 @@
+.addeditem{
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  display: flex;
+  padding: 20px;
+  margin: 0 0 20px  0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addeditem img{
+  width: 85px;
+  display: flex;
+  
+}
+
+.addeditem .item_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+.addeditem .bulk_actions{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.addeditem  .number-input {
+  border: 0;
+  display: inline-flex;
+  flex-direction: column;
+  /* align-content: center; */
+  justify-content: center;
+  align-items: center;
+}
+
+.addeditem .item_right_section{
+  display: flex;
+  /* align-items: center; */
+  transform: translateY(-2.5px);
+}
+.addeditem .item_left_section{
+  display: flex;
+}
+
+.plus{
+  background-color: #A1DBF5;
+}
+
+.addeditem .number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 4rem;
+}
+
+
+.addeditem .item_name{
+  color: #494F86;
+  font-size: 15px;
+  font-weight: 600;
+}
+.addeditem .item_price{
+  color: #3E45AA;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.trash{
+  color: #3E45AA;
+  cursor: pointer;
+}
+.addeditem .number-input {
+  width: 65%;
+}
+/*  */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  /* width: 1000%; */
+  cursor: pointer;
+}
+input[type="checkbox"]:after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f111";
+  font-size: 22px;
+  color: #478bfb;
+  right: -16px;
+  top: -11px;
+}
+input[type="checkbox"]:checked:after {
+  font-weight: 900;
+  content: "\f058";
+  color: #3E45AA;
+}
+

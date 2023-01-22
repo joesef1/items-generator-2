@@ -1,0 +1,101 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: #E9E9F1;
+  /* background-color: #0606c9; */
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.item-generator-container{
+width: 100%;
+margin: 0 auto;
+}
+
+.addbutton{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+.addbutton button{
+  color:#A1DBF5;
+  background-color: #3E45AA;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 100px;
+  cursor: pointer;
+
+
+  color:#A1DBF5;
+  background-color: #3E45AA;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 29px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.Item_selector{
+  margin:  20px 0 20px 0 ;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.select-box{
+  margin: 0 auto 20px auto ;
+  z-index: 222;
+  width: 70%;
+}
+
+
+/* total_price */
+.total_price{
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 0;
+  border-radius: 25px 25px 0 0;
+}
+.total_price_container{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#save_items_btn{
+  color:#A1DBF5;
+  background-color: #3E45AA;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.total_text{
+  line-height: 43px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+/*  */
+
+/*  */
+.space{
+  height: 91px;
+}

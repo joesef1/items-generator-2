@@ -1,9 +1,9 @@
 .addeditem{
   background-color: rgb(255, 255, 255);
-  border-radius: 25px;
+  border-radius: 20px;
   display: flex;
-  padding: 20px;
-  margin: 0 0 20px  0;
+  padding: 10px 20px;
+  margin: 0 0 10px  0;
   align-items: center;
   justify-content: space-between;
 }

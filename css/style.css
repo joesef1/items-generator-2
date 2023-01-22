@@ -22,35 +22,30 @@ margin: 0 auto;
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 .addbutton button{
-  color:#A1DBF5;
-  background-color: #3E45AA;
-  border: 0;
-  border-radius: 20px;
-  padding: 10px 100px;
-  cursor: pointer;
-
-
-  color:#A1DBF5;
-  background-color: #3E45AA;
-  border: 0;
-  border-radius: 20px;
-  padding: 10px 29px;
+  padding: 5px 25px;
   cursor: pointer;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+
+  color:#A1DBF5;
+  background-color: #3E45AA;
+  border: 0;
+  border-radius: 20px;
 }
 
 .Item_selector{
-  margin:  20px 0 20px 0 ;
+  margin:  20px 0 10px 0 ;
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
 }
 
 .select-box{
-  margin: 0 auto 20px auto ;
+  margin: 0 auto 10px auto ;
   z-index: 222;
   width: 70%;
 }
@@ -92,8 +87,7 @@ margin: 0 auto;
 
 }
 .total_text{
-  /* line-height: 43px; */
-  /* line-height: 55px; */
+
   font-size: 20px;
   font-size: 24px;
   display: flex;
@@ -109,5 +103,5 @@ margin: 0 auto;
 
 /*  */
 .space{
-  height: 96px;
+  height: 70px;
 }

@@ -14,6 +14,9 @@
 .select-box__list {
   border-radius: 5px;
 }
+.select-box__option {
+  transition: background-color 0.3s ease;
+}
 
 
 

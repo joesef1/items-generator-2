@@ -59,12 +59,18 @@
   font-size: 15px;
   font-weight: 600;
 }
-.addeditem .item_price{
+.addeditem .item_price input{
   color: #3E45AA;
   font-size: 20px;
   font-weight: 700;
+  border: 0;
+  transform: translateY(2px);
+  width: 60px;
 }
-
+.addeditem .item_price input:focus{
+  border: 0;
+  outline: none;
+}
 .trash{
   color: #3E45AA;
   cursor: pointer;

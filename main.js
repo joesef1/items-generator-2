@@ -188,7 +188,9 @@ addButton.addEventListener("click", function() {
         </div>
         <div class="item_info">
           <div class="item_name">${selectedItem}</div>
-          <div class="item_price">$ 120.99</div>
+          <div class="item_price"> <span class="dollar">$</span>
+          <input class="price" name="price" min="0" value="0.00" type="number">
+          </div>
         </div>
         </div>
 
@@ -233,3 +235,19 @@ input.addEventListener("focus", function() {
 input.addEventListener("blur", function() {
   this.style.border = "border-width: 0 2px";
 });
+
+
+// 
+document.querySelector(".addeditems").addEventListener("click", function(e){
+  if (e.target && e.target.matches(".trash")) {
+      e.target.parentNode.parentNode.parentNode.parentNode.remove();
+  }
+});
+
+
+
+document.querySelector("input.price").addEventListener("change", function() {
+  this.value = parseFloat(this.value).toFixed(2);
+});
+
+// document.querySelector('.select-box__input').disabled = true;

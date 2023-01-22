@@ -1,4 +1,7 @@
-
+.disabled {
+  pointer-events: none !important;
+  opacity: 0.6 !important;
+}
 .select-box {
   position: relative;
   display: block;
@@ -7,6 +10,8 @@
   font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
   font-size: 18px;
   color: #60666d;
+    background-color: blue !important;
+
 }
 @media (min-width: 768px) {
   .select-box {
@@ -97,5 +102,6 @@
 .select-box{
   margin: 0 auto 20px auto ;
   z-index: 222;
-  width: 70%;
+  width: 74% !important;
+  /* background-color: aqua; */
 }

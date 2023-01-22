@@ -8,6 +8,18 @@ body{
   background-color: #E9E9F1;
   /* background-color: #0606c9; */
 }
+input.quantity:active {
+  border: none !important;
+}
+input.quantity:focus {
+  outline: none;
+}
+input.quantity {
+  font-size: 3px;
+}
+/* input.price {
+  padding: auto 30px;
+} */
 
 .container{
   width: 90%;
@@ -95,7 +107,9 @@ margin: 0 auto;
 }
 
 
-
+.number-input{
+  margin: 10px 0;
+}
 
 
 

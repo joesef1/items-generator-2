@@ -250,4 +250,8 @@ document.querySelector("input.price").addEventListener("change", function() {
   this.value = parseFloat(this.value).toFixed(2);
 });
 
-// document.querySelector('.select-box__input').disabled = true;
+var input = document.querySelector('.quantity');
+input.addEventListener('focus', function() {
+  this.style.border = 'none';
+});
+

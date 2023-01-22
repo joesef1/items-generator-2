@@ -2,14 +2,14 @@
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   display: flex;
-  padding: 10px 20px;
+  padding: 5px 12px;
   margin: 0 0 10px  0;
   align-items: center;
   justify-content: space-between;
 }
 
 .addeditem img{
-  width: 85px;
+  width: 70px;
   display: flex;
   
 }
@@ -24,7 +24,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px 0;
+  /* align-items: center; */
+  /* padding: 5px 0; */
+  padding: 10px 20px;
+  /* background-color: #494F86; */
+  
+
 }
 .addeditem  .number-input {
   border: 0;
@@ -37,8 +42,11 @@
 
 .addeditem .item_right_section{
   display: flex;
-  /* align-items: center; */
-  transform: translateY(-2.5px);
+  align-items: center;
+  justify-content: space-around;
+  /* transform: translateY(-2.5px); */
+  /* background-color: #9099a8; */
+  position: relative;
 }
 .addeditem .item_left_section{
   display: flex;
@@ -76,7 +84,7 @@
   cursor: pointer;
 }
 .addeditem .number-input {
-  width: 65%;
+  width: 95%;
 }
 /*  */
 input[type="checkbox"] {
@@ -93,11 +101,16 @@ input[type="checkbox"]:after {
   font-size: 22px;
   color: #478bfb;
   right: -16px;
-  top: -11px;
+  top: 14px;
 }
 input[type="checkbox"]:checked:after {
   font-weight: 900;
   content: "\f058";
   color: #3E45AA;
+}
+.delete_button{
+  position: absolute;
+ right: 8px;
+ top: 9px; 
 }
 

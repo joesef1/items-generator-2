@@ -45,7 +45,7 @@ margin: 0 auto;
 .Item_selector{
   margin:  20px 0 20px 0 ;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 20px;
 }
 
@@ -63,8 +63,8 @@ margin: 0 auto;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px 0;
-  border-radius: 25px 25px 0 0;
+  padding: 15px 0 15px 0;
+  border-radius: 20px 20px 0 0;
   /* position: relative; */
 }
  .dollar{
@@ -84,16 +84,20 @@ margin: 0 auto;
   background-color: #3E45AA;
   border: 0;
   border-radius: 20px;
-  padding: 10px 25px;
+  padding: 5px 25px;
   cursor: pointer;
   font-size: 20px;
+  display: flex;
+  align-items: center;
 
 }
 .total_text{
-  line-height: 43px;
-  line-height: 55px;
+  /* line-height: 43px; */
+  /* line-height: 55px; */
   font-size: 20px;
   font-size: 24px;
+  display: flex;
+  align-items: center;
 }
 
 

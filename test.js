@@ -1,8 +1,11 @@
 
-var addButton = document.getElementById("add-button");
-addButton.addEventListener("click", function() {
+// Add a click event listener to the add button
+document.getElementById("add-button").addEventListener("click", function() {
   var selectedItem = document.querySelector("input[name='Ben']:checked").nextElementSibling.innerHTML;
-  var quantity = document.querySelector("input.quantity").value;
+  // var quantity = document.querySelector("input.quantity").value;
+  // var price = document.querySelector("input.price").value;
+  
+  // Add the new item to the cart
   var addedItem = `<div class="addeditem">
         <div class="item_left_section">
         <div class="item_image">
@@ -12,19 +15,17 @@ addButton.addEventListener("click", function() {
         <div class="item_info">
           <div class="item_name">${selectedItem}</div>
           <div class="item_price"> <span class="dollar">$</span>
-          <input class="price" name="price" min="0" value="0.00" type="number">
+          <input class="price" name="price" min="0" value="1.00" type="number">
+
           </div>
         </div>
         </div>
-
         <div class="item_right_section">
-
         <div class="item_quantity">
-
         <div class="quantity">
         <div class="number-input">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-      <input class="quantity" min="0" name="quantity" value="${quantity}" type="number">
+      <input class="quantity" min="0" name="quantity" value="1" type="number">
       <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
     </div>
     </div>
@@ -42,83 +43,118 @@ addButton.addEventListener("click", function() {
       `;
   var addedItems = document.querySelector(".addeditems");
   addedItems.innerHTML += addedItem;
+  
+  // Update the total price and quantity
+  updateTotal();
 });
-var input = document.querySelector("input.quantity");
-input.addEventListener("focus", function() {
-  this.style.border = "none";
-});
-input.addEventListener("blur", function() {
-  this.style.border = "border-width: 0 2px";
-});
+// Add a change event listener to the price and quantity input fields
+// document.querySelector(".addeditems").addEventListener("input", function(e) {
+//   if (e.target && (e.target.matches(".price") || e.target.matches(".quantity"))) {
+//     updateTotal();
+//   }
+// });
+
+
+function updateTotal() {
+
+  // // Get the prices and quantities of all items in the cart
+  // const prices = document.querySelectorAll('.price');
+  // const quantities = document.querySelectorAll('.quantity');
+
+  // // Use the reduce method to sum up all the prices and quantities
+  // const totalPrice = _.reduce(prices, (sum, price) => {
+  //   return sum + parseFloat(price.value);
+  // }, 0);
+
+  // const totalQuantity = _.reduce(quantities, (sum, quantity) => {
+  //   return sum + parseFloat(quantity.value);
+  // }, 0);
+
+  // // Update the total price and quantity on the page
+  // document.querySelector('.total-price').innerHTML = totalPrice;
+  // document.querySelector('.total-quantity').innerHTML = totalQuantity;
+
+
+
+
+
+
+
+
+
+
+
+  const prices = document.getElementsByClassName('price')[0].value;
+  const quantities = document.getElementsByClassName('quantity_input').value;
+
+  // Use the reduce method to sum up all the prices and quantities
+// const totalPrice = _.reduce(prices, (sum, price) => {
+//   return sum + parseFloat(price);
+// }, 0);
+
+// const totalQuantity = _.reduce(quantities, (sum, quantity) => {
+//   return sum + parseInt(quantity.value);
+// }, 0);
+
+  // console.log(prices);
+  // console.log(quantities);
+  // console.log(totalPrice);
+  // console.log(totalQuantity);
+  // let allprice= [...prices, prices]
+  // console.log(allprice);
+
+
+
+
+
+
+// price
+  const pricesArray = Array.from(document.getElementsByClassName('price')).map(price => price.value);
+
+const updatedPricesArray = [...pricesArray, prices];
+console.log(updatedPricesArray);
+
+
+
+const totalPriceForItems = updatedPricesArray.reduce((sum, price) => {
+  return sum + parseFloat(price);
+}, 0);
+// console.log(totalPriceForItems);
+// //quantity
+
+const quantityArray = Array.from(document.getElementsByClassName('quantity_input')).map(quantity => quantity.value);
+
+const updatedquantityArray = [...quantityArray ];
+// console.log(updatedquantityArray);
+
+
+
+// // const totalquantityForItems = updatedquantityArray.reduce((sum, quantity) => {
+// //   return sum + parseFloat(quantity);
+// // }, 0);
+// console.log(totalquantityForItems);
+
+// //quantity
+
+// const quantityArray = Array.from(document.getElementsByClassName('quantity_input')).map(quantity => quantity.value);
+// // 
+// const updatedquantityArray = [...quantityArray, quantities];
+// console.log(updatedquantityArray);
+
+
+// const currentquantity =[]
+// currentquantity.push(quantities)
+// console.log(currentquantity);
+
+// const totalQuantity = quantityArray.reduce((acc, cur) => {
+//   return acc + parseFloat(cur);
+// }, 0);
+// console.log(totalQuantity);
+
+}
+
 document.querySelector(".addeditems").addEventListener("click", function(e){
   if (e.target && e.target.matches(".trash")) {
       e.target.parentNode.parentNode.parentNode.parentNode.remove();
   }
 });
-document.querySelector("input.price").addEventListener("change", function() {
-  this.value = parseFloat(this.value).toFixed(2);
-});
-var input = document.querySelector('.quantity');
-input.addEventListener('focus', function() {
-  this.style.border = 'none';
-});
-
-
-
-// Global variable to store the total price
-let totalPrice = 0;
-
-// Function to calculate the total price
-function calculateTotalPrice() {
-  totalPrice = 0;
-  // Get all elements with class "addeditem"
-  let addedItems = document.querySelectorAll(".addeditem");
-  addedItems.forEach(function(item) {
-    // Get the price and quantity of the current item
-    let itemPrice = item.querySelector(".price").value;
-    let itemQuantity = item.querySelector(".quantity").value;
-    // Add the item's price * quantity to the total price
-    totalPrice += itemPrice * itemQuantity;
-  });
-}
-
-// Function to update the total price display
-function updateTotalPriceDisplay() {
-  // Get the element to display the total price
-  let totalPriceDisplay = document.querySelector(".total_price_number");
-  // Update the innerHTML of the element to display the total price
-  totalPriceDisplay.innerHTML = totalPrice.toFixed(2);
-}
-
-// Add event listeners to update the total price when the "add-button" is clicked,
-// when the "quantity" or "price" input fields are changed, and when the trash icon is clicked
-addButton.addEventListener("click", function() {
-  // Add the new item to the cart and calculate the total price
-  // (same code as in your original script)
-  // ...
-  calculateTotalPrice();
-  updateTotalPriceDisplay();
-});
-
-document.querySelector(".addeditems").addEventListener("click", function(e) {
-  if (e.target && e.target.matches(".trash")) {
-    e.target.parentNode.parentNode.parentNode.parentNode.remove();
-    calculateTotalPrice();
-    updateTotalPriceDisplay();
-  }
-});
-
-document.querySelectorAll(".quantity").forEach(function(input) {
-  input.addEventListener("change", function() {
-    calculateTotalPrice();
-    updateTotalPriceDisplay();
-  });
-});
-
-document.querySelectorAll(".price").forEach(function(input) {
-  input.addEventListener("change", function() {
-    calculateTotalPrice();
-    updateTotalPriceDisplay();
-  });
-});
-
